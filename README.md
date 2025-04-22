@@ -16,8 +16,8 @@
 
 ```js
 require('dotenv').config()
-const stripe = require('stripe-helper')
+const stripe = require('stripe-for-node')
 
 // Example: creates a new Customer
 
-await stripe = stripeHelper.createAccount('test@example.com')
+await stripe = stripe.createAccount('test@example.com')
