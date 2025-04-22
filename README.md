@@ -1,6 +1,5 @@
-# stripe-env-helper
+# stripe-for-node
 
-Simple utility wrapper for Stripe that auto-selects keys based on `NODE_ENV`.
 
 ## Features
 
@@ -18,5 +17,7 @@ Simple utility wrapper for Stripe that auto-selects keys based on `NODE_ENV`.
 ```js
 require('dotenv').config()
 const stripe = require('stripe-helper')
+
+// Example: creates a new Customer
 
 await stripe = stripeHelper.createAccount('test@example.com')
