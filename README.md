@@ -16,11 +16,15 @@
 - Creates Stripe payment intents
 - Confirms Stripe payment intents
 
-## Environment Variables
+## 🌐 Environment Variables
 
-- `NODE_ENV` — set to `production` or `development`
-- `STRIPE_KEY_PROD` — your live secret key
-- `STRIPE_KEY_TEST` — your test secret key
+Set up your `.env` file with the following variables:
+
+| Variable           | Description                              |
+|--------------------|------------------------------------------|
+| `NODE_ENV`         | Should be `production` or `development`  |
+| `STRIPE_KEY_PROD`  | Your **Live** Stripe Secret Key          |
+| `STRIPE_KEY_TEST`  | Your **Test** Stripe Secret Key          |
 
 ## Usage
 
@@ -28,25 +32,7 @@
 require('dotenv').config()
 const stripe = require('stripe-for-node')
 
-// Example: creates a new Customer
+// Example: Creates a new Customer
+const customer = await stripe.createAccount('test@example.com')
+console.log(customer)
 
-await stripe = stripe.createAccount('test@example.com')
-
-## 🔧 Function: `updateAccount(stripeId, name, address)`
-
-This function updates an existing Stripe customer with a new name and/or address.
-
-### 🧾 Parameters:
-
-- `stripeId` *(string)* — The Stripe customer ID you want to update (e.g., `cus_P5kT4M6s8N7abc`)
-- `name` *(string)* — The new name for the customer
-- `address` *(object)* — A Stripe-compatible address object:
-
-```js
-{
-  line1: '123 Main Street',
-  city: 'New York',
-  state: 'NY',
-  postal_code: '10001',
-  country: 'US'
-}
