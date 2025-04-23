@@ -3,6 +3,7 @@ const request = require("request")
 const axios = require("axios")
 require("dotenv").config()
 
+// package for stripe
 module.exports = {
   getCurrentEnvironment() {
     if (process.env.NODE_ENV === "production") {
