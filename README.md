@@ -18,6 +18,8 @@ Set up your `.env` file with the following variables:
 | `STRIPE_KEY_PROD`  | Your **Live** Stripe Secret Key          |
 | `STRIPE_KEY_TEST`  | Your **Test** Stripe Secret Key          |
 | `HOME_PAGE`        | redirect URL after Stripe account onboarding/KYC processes |  
+| `PRODUCT_NAME`     | Your product name for statement descriptor |
+| `PRODUCT_WEBSITE_URL` | Your business website URL used in Stripe business profile |
 
 ## Usage
 
