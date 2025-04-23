@@ -688,7 +688,7 @@ module.exports = {
         const stripeResponse = await axios.get("https://api.stripe.com/v1/payouts?limit=100", {
           headers: {
             "Stripe-Account": stripeId,
-            Authorization: `Bearer ${process.env.STRIPE_KEY_TF_PROD}`
+            Authorization: `Bearer ${process.env.STRIPE_KEY_PROD}`
           }
         })
         resolve(stripeResponse)
@@ -705,7 +705,7 @@ module.exports = {
         const stripeResponse = await axios.get(`https://api.stripe.com/v1/payouts/${payoutId}`, {
           headers: {
             "Stripe-Account": stripeId,
-            Authorization: `Bearer ${process.env.STRIPE_KEY_TF_PROD}`
+            Authorization: `Bearer ${process.env.STRIPE_KEY_PROD}`
           }
         })
         resolve(stripeResponse)
