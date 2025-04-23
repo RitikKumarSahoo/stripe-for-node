@@ -20,6 +20,7 @@ Set up your `.env` file with the following variables:
 | `HOME_PAGE`        | redirect URL after Stripe account onboarding/KYC processes |  
 | `PRODUCT_NAME`     | Your product name for statement descriptor |
 | `PRODUCT_WEBSITE_URL` | Your business website URL used in Stripe business profile |
+| `DO_SPLIT_PAYMENT` | Set to `true` to enable split payments |
 
 ## Usage
 
